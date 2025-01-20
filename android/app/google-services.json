@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "401365503190",
+    "project_id": "minhas-tarefas-3bf8f",
+    "storage_bucket": "minhas-tarefas-3bf8f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:401365503190:android:d299c50784bba3041ecd77",
+        "android_client_info": {
+          "package_name": "com.minhastarefas.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZPDKzVHTzGXwmBzSNJ2nzj1tkHonnCyM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
