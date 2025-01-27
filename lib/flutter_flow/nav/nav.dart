@@ -106,7 +106,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'Perfil',
           path: '/perfil',
-          builder: (context, params) => const PerfilWidget(),
+          builder: (context, params) => PerfilWidget(
+            nome: params.getParam(
+              'nome',
+              ParamType.String,
+            ),
+            bio: params.getParam(
+              'bio',
+              ParamType.String,
+            ),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

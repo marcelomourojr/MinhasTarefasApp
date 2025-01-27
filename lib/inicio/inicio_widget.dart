@@ -52,16 +52,45 @@ class _InicioWidgetState extends State<InicioWidget> {
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     AuthUserStreamWidget(
-                      builder: (context) => Container(
-                        width: 60.0,
-                        height: 60.0,
-                        clipBehavior: Clip.antiAlias,
-                        decoration: const BoxDecoration(
-                          shape: BoxShape.circle,
-                        ),
-                        child: Image.network(
-                          currentUserPhoto,
-                          fit: BoxFit.cover,
+                      builder: (context) => InkWell(
+                        splashColor: Colors.transparent,
+                        focusColor: Colors.transparent,
+                        hoverColor: Colors.transparent,
+                        highlightColor: Colors.transparent,
+                        onTap: () async {
+                          context.pushNamed(
+                            'Perfil',
+                            queryParameters: {
+                              'nome': serializeParam(
+                                currentUserDisplayName,
+                                ParamType.String,
+                              ),
+                              'bio': serializeParam(
+                                valueOrDefault(
+                                    currentUserDocument?.sobreUser, ''),
+                                ParamType.String,
+                              ),
+                            }.withoutNulls,
+                            extra: <String, dynamic>{
+                              kTransitionInfoKey: const TransitionInfo(
+                                hasTransition: true,
+                                transitionType: PageTransitionType.fade,
+                                duration: Duration(milliseconds: 0),
+                              ),
+                            },
+                          );
+                        },
+                        child: Container(
+                          width: 60.0,
+                          height: 60.0,
+                          clipBehavior: Clip.antiAlias,
+                          decoration: const BoxDecoration(
+                            shape: BoxShape.circle,
+                          ),
+                          child: Image.network(
+                            currentUserPhoto,
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
                     ),

@@ -232,8 +232,17 @@ class _BoasVindasWidgetState extends State<BoasVindasWidget> {
               Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 8.0),
                 child: FFButtonWidget(
-                  onPressed: () {
-                    print('Button pressed ...');
+                  onPressed: () async {
+                    context.pushNamed(
+                      'Login',
+                      extra: <String, dynamic>{
+                        kTransitionInfoKey: const TransitionInfo(
+                          hasTransition: true,
+                          transitionType: PageTransitionType.fade,
+                          duration: Duration(milliseconds: 0),
+                        ),
+                      },
+                    );
                   },
                   text: 'Login',
                   options: FFButtonOptions(
@@ -257,8 +266,17 @@ class _BoasVindasWidgetState extends State<BoasVindasWidget> {
               Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 100.0),
                 child: FFButtonWidget(
-                  onPressed: () {
-                    print('Button pressed ...');
+                  onPressed: () async {
+                    context.pushNamed(
+                      'Cadastro',
+                      extra: <String, dynamic>{
+                        kTransitionInfoKey: const TransitionInfo(
+                          hasTransition: true,
+                          transitionType: PageTransitionType.fade,
+                          duration: Duration(milliseconds: 0),
+                        ),
+                      },
+                    );
                   },
                   text: 'Inscrever-se',
                   options: FFButtonOptions(

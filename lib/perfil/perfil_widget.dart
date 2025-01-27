@@ -10,7 +10,14 @@ import 'perfil_model.dart';
 export 'perfil_model.dart';
 
 class PerfilWidget extends StatefulWidget {
-  const PerfilWidget({super.key});
+  const PerfilWidget({
+    super.key,
+    required this.nome,
+    required this.bio,
+  });
+
+  final String? nome;
+  final String? bio;
 
   @override
   State<PerfilWidget> createState() => _PerfilWidgetState();
@@ -26,13 +33,16 @@ class _PerfilWidgetState extends State<PerfilWidget> {
     super.initState();
     _model = createModel(context, () => PerfilModel());
 
-    _model.textFieldEmailTextController ??= TextEditingController();
+    _model.textFieldEmailTextController ??=
+        TextEditingController(text: currentUserEmail);
     _model.textFieldEmailFocusNode ??= FocusNode();
 
-    _model.textFieldNomeTextController ??= TextEditingController();
+    _model.textFieldNomeTextController ??=
+        TextEditingController(text: widget.nome);
     _model.textFieldNomeFocusNode ??= FocusNode();
 
-    _model.textFieldBioTextController ??= TextEditingController();
+    _model.textFieldBioTextController ??=
+        TextEditingController(text: widget.bio);
     _model.textFieldBioFocusNode ??= FocusNode();
   }
 
@@ -58,10 +68,32 @@ class _PerfilWidgetState extends State<PerfilWidget> {
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
+              Padding(
+                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    InkWell(
+                      splashColor: Colors.transparent,
+                      focusColor: Colors.transparent,
+                      hoverColor: Colors.transparent,
+                      highlightColor: Colors.transparent,
+                      onTap: () async {
+                        context.pushNamed('Inicio');
+                      },
+                      child: Icon(
+                        Icons.keyboard_backspace,
+                        color: FlutterFlowTheme.of(context).primaryText,
+                        size: 24.0,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
               Align(
                 alignment: const AlignmentDirectional(0.0, 0.0),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -129,6 +161,16 @@ class _PerfilWidgetState extends State<PerfilWidget> {
 
                           context.pushNamed(
                             'Perfil',
+                            queryParameters: {
+                              'nome': serializeParam(
+                                _model.textFieldNomeTextController.text,
+                                ParamType.String,
+                              ),
+                              'bio': serializeParam(
+                                _model.textFieldBioTextController.text,
+                                ParamType.String,
+                              ),
+                            }.withoutNulls,
                             extra: <String, dynamic>{
                               kTransitionInfoKey: const TransitionInfo(
                                 hasTransition: true,
