@@ -88,7 +88,10 @@ class _InicioWidgetState extends State<InicioWidget> {
                             shape: BoxShape.circle,
                           ),
                           child: Image.network(
-                            currentUserPhoto,
+                            valueOrDefault<String>(
+                              currentUserPhoto,
+                              'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/minhastarefas-dg7fh5/assets/diqmgi6h32ls/images.png',
+                            ),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -109,7 +112,7 @@ class _InicioWidgetState extends State<InicioWidget> {
                         Expanded(
                           child: AuthUserStreamWidget(
                             builder: (context) => Text(
-                              'Olá,$currentUserDisplayName',
+                              'Olá, $currentUserDisplayName.',
                               textAlign: TextAlign.center,
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
