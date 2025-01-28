@@ -199,7 +199,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                               child: Image.network(
                                 valueOrDefault<String>(
                                   currentUserPhoto,
-                                  'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/minhastarefas-dg7fh5/assets/diqmgi6h32ls/images.png',
+                                  'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/minhastarefas-dg7fh5/assets/vjgcfmw4aynv/foto.webp',
                                 ),
                                 fit: BoxFit.cover,
                               ),

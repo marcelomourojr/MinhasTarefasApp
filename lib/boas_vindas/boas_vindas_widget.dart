@@ -71,7 +71,7 @@ class _BoasVindasWidgetState extends State<BoasVindasWidget> {
                                   ClipRRect(
                                     borderRadius: BorderRadius.circular(8.0),
                                     child: Image.network(
-                                      'https://picsum.photos/seed/85/600',
+                                      'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/minhastarefas-dg7fh5/assets/q6r0lqykdeee/rocketsolucoes_A_close-up_shot_of_a_cheerful_man_holding_a_smar_0a095c79-8115-4402-805f-1c940efc8858.png',
                                       width: 250.0,
                                       height: 200.0,
                                       fit: BoxFit.cover,
@@ -86,7 +86,7 @@ class _BoasVindasWidgetState extends State<BoasVindasWidget> {
                                           MainAxisAlignment.start,
                                       children: [
                                         Text(
-                                          'Seu App inteligente de tarefas',
+                                          'Seu app favorito de tarefas',
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
@@ -108,7 +108,7 @@ class _BoasVindasWidgetState extends State<BoasVindasWidget> {
                                       children: [
                                         Flexible(
                                           child: Text(
-                                            'Já imaginou ter seu dia-dia organizado?\nTudo na palma de suas mãos. Este app é para você que busca ter dias produtivos.',
+                                            'Que tal organizar sua rotina de forma simples e eficiente?\nTudo o que você precisa para ter dias mais produtivos está na palma da sua mão!',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
@@ -133,7 +133,7 @@ class _BoasVindasWidgetState extends State<BoasVindasWidget> {
                                   ClipRRect(
                                     borderRadius: BorderRadius.circular(8.0),
                                     child: Image.network(
-                                      'https://picsum.photos/seed/85/600',
+                                      'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/minhastarefas-dg7fh5/assets/tjxybf5e33y8/Tarefas.webp',
                                       width: 250.0,
                                       height: 200.0,
                                       fit: BoxFit.cover,
@@ -170,7 +170,7 @@ class _BoasVindasWidgetState extends State<BoasVindasWidget> {
                                       children: [
                                         Flexible(
                                           child: Text(
-                                            'Economize as folhas do seu caderno. Agora seu celular terá sua lista de tarefas inteligente.',
+                                            'Diga adeus às anotações no papel! \nVocê tem uma lista de tarefas inteligente e uma organização completa na palma da mão.',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(

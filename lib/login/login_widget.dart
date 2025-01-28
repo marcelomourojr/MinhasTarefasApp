@@ -61,7 +61,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                       ClipRRect(
                         borderRadius: BorderRadius.circular(8.0),
                         child: Image.network(
-                          'https://picsum.photos/seed/634/600',
+                          'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/minhastarefas-dg7fh5/assets/g199ewd03j7n/logoatt.png',
                           width: 50.0,
                           height: 50.0,
                           fit: BoxFit.cover,
