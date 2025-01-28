@@ -135,7 +135,7 @@ class _InicioWidgetState extends State<InicioWidget> {
                         children: [
                           Expanded(
                             child: Text(
-                              'Vamos ser produtivos hoje !?',
+                              'Pronto para organizar seu dia e realizar suas metas?',
                               textAlign: TextAlign.center,
                               style: FlutterFlowTheme.of(context)
                                   .bodySmall
@@ -519,10 +519,9 @@ class _InicioWidgetState extends State<InicioWidget> {
                                                 const AlignmentDirectional(1.0, 0.0),
                                             child: Padding(
                                               padding: const EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      5.0, 8.0, 0.0, 10.0),
+                                                  .fromSTEB(5.0, 0.0, 5.0, 0.0),
                                               child: Column(
-                                                mainAxisSize: MainAxisSize.max,
+                                                mainAxisSize: MainAxisSize.min,
                                                 children: [
                                                   if (listView1TarefasRecord
                                                       .prioridadeAlta)
@@ -533,7 +532,7 @@ class _InicioWidgetState extends State<InicioWidget> {
                                                                   0.0,
                                                                   0.0,
                                                                   5.0,
-                                                                  0.0),
+                                                                  5.0),
                                                       child: Container(
                                                         width: 55.0,
                                                         height: 22.0,
@@ -603,7 +602,7 @@ class _InicioWidgetState extends State<InicioWidget> {
                                                                   0.0,
                                                                   0.0,
                                                                   5.0,
-                                                                  0.0),
+                                                                  5.0),
                                                       child: Container(
                                                         width: 55.0,
                                                         height: 22.0,
@@ -1119,10 +1118,9 @@ class _InicioWidgetState extends State<InicioWidget> {
                                                 const AlignmentDirectional(1.0, 0.0),
                                             child: Padding(
                                               padding: const EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      5.0, 8.0, 0.0, 10.0),
+                                                  .fromSTEB(5.0, 0.0, 5.0, 0.0),
                                               child: Column(
-                                                mainAxisSize: MainAxisSize.max,
+                                                mainAxisSize: MainAxisSize.min,
                                                 children: [
                                                   if (listView2TarefasRecord
                                                       .prioridadeAlta)
@@ -1133,7 +1131,7 @@ class _InicioWidgetState extends State<InicioWidget> {
                                                                   0.0,
                                                                   0.0,
                                                                   5.0,
-                                                                  0.0),
+                                                                  5.0),
                                                       child: Container(
                                                         width: 55.0,
                                                         height: 22.0,
@@ -1203,7 +1201,7 @@ class _InicioWidgetState extends State<InicioWidget> {
                                                                   0.0,
                                                                   0.0,
                                                                   5.0,
-                                                                  0.0),
+                                                                  5.0),
                                                       child: Container(
                                                         width: 55.0,
                                                         height: 22.0,
